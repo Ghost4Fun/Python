@@ -3,17 +3,10 @@ import datetime
 
 print("When you will be 100 years old?")
 
-def calculation():
-    name = input("What is your name?: ")
-    time.sleep(1.0)
-    age = int(input("How old are you?: "))
-    time.sleep(1.0)
-    number = int(input("How much of the copies?: "))
+def calculation(name, age, number):
     if number <= 0:
         print("Number must be greater than 0")
-        time.sleep(1.0)
-        return calculation()
-
+        return calculation(name, age, number = int(input("How much of the copies?: ")))
     time.sleep(1.0)    
 
     date = datetime.datetime.now()
@@ -21,10 +14,12 @@ def calculation():
 
     result = name + " at " + str(calc) + " you will be 100 years old.\n"
     
-    print(result * number)
-    time.sleep(2.0)
-    exit()
-
-calculation()
+    return result * number
 
 
+calculation(input("What is your name?: "), int(input("How old are you?: ")), int(input("How much of the copies?: ")))
+
+print(calculation)
+time.sleep(2.0)
+
+exit()

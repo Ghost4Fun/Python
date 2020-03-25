@@ -15,12 +15,9 @@ def NumberOfLife(number):
       time.sleep(1.0)
       return NumberOfLife(int(input("Please provide a number for the answer: ")))
   return number
+
   
-
-
-NumberOfLife(int(input("Please provide a number for the answer: ")))
-
-print(NumberOfLife)
+print(NumberOfLife(int(input("Please provide a number for the answer: "))))
 print("You did it!")
 time.sleep(2.0)
 

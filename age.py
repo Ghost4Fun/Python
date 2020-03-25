@@ -17,9 +17,8 @@ def calculation(name, age, number):
     return result * number
 
 
-calculation(input("What is your name?: "), int(input("How old are you?: ")), int(input("How much of the copies?: ")))
 
-print(calculation)
+print(calculation(input("What is your name?: "), int(input("How old are you?: ")), int(input("How much of the copies?: "))))
 time.sleep(2.0)
 
 exit()
